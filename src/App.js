@@ -46,7 +46,7 @@ function App() {
           onApprove={async (data, actions) => {
             let order = await actions.order.capture();
             console.log(order);
-            window.ReactNativeWebView &&
+            window.ReactNativeWebView && 
               window.ReactNativeWebView.postMessage(JSON.stringify(order));
             return order;
           }}
